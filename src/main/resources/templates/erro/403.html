@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<div th:replace="views/header :: header-css" />
+</head>
+<body>
+	<div th:replace="views/header :: header" />
+	<div class="container">
+		<div class="starter-template">
+			<h1>403 - Acesso negado</h1>
+			<div th:inline="text">Olá
+				'[[${#httpServletRequest.remoteUser}]]', sem permissao para essa
+				pagina.</div>
+		</div>
+	</div>
+	<div th:replace="views/footer :: footer" />
+</body>
+</html>
